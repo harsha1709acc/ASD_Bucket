@@ -10,7 +10,6 @@ const {
 
 const { cache, clearCache } = require('../middleware/cache_middleware')
 
-// GET all products
 async function getAll(req, res) {
     try {
         const products = await getProducts()
@@ -26,7 +25,6 @@ async function getAll(req, res) {
     }
 }
 
-// GET one product
 async function getOne(req, res) {
     try {
         const product = await getProduct(req.params.id)
@@ -47,7 +45,6 @@ async function getOne(req, res) {
     }
 }
 
-// POST
 async function create(req, res) {
     try {
         const product = await createProduct(req.body)
@@ -58,7 +55,6 @@ async function create(req, res) {
     }
 }
 
-// PUT
 async function replace(req, res) {
     try {
         const product = await replaceProduct(
@@ -77,7 +73,6 @@ async function replace(req, res) {
     }
 }
 
-// PATCH
 async function update(req, res) {
     try {
         const product = await updateProduct(
@@ -96,7 +91,6 @@ async function update(req, res) {
     }
 }
 
-// DELETE
 async function remove(req, res) {
     try {
         const product = await deleteProduct(req.params.id)

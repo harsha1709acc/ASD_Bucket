@@ -5,19 +5,16 @@ const {
     writeProducts
 } = require('../database/data.js')
 
-// GET all products
 async function getProducts() {
     const products = await getAllProducts()
     return products
 }
 
-// GET one product
 async function getProduct(id) {
     const product = await getProductById(id)
     return product
 }
 
-// POST: create a product
 async function createProduct(data) {
     const products = await getAllProducts()
 
@@ -33,7 +30,6 @@ async function createProduct(data) {
     return newProduct
 }
 
-// PUT: replace a product
 async function replaceProduct(id, data) {
     const products = await getAllProducts()
 
@@ -55,7 +51,6 @@ async function replaceProduct(id, data) {
     return products[index]
 }
 
-// PATCH: update a product
 async function updateProduct(id, data) {
     const products = await getAllProducts()
 
@@ -78,7 +73,6 @@ async function updateProduct(id, data) {
     return products[index]
 }
 
-// DELETE: delete a product
 async function deleteProduct(id) {
     const products = await getAllProducts()
 
